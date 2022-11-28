@@ -1,6 +1,6 @@
 package autoracing;
 
-public class Bus extends Car implements Competing{
+public class Bus extends Car implements Competing {
     public Bus(String brand, String model, double engineCapacity) {
         super(brand, model, engineCapacity);
     }

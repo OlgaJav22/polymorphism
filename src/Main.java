@@ -56,6 +56,7 @@ public class Main {
         oleg.drivingAcar(jac);
 
         vasya.drivingAcar(audi);
+        vasya.printif(audi);
 
     }
 }

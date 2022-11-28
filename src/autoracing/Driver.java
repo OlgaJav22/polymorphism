@@ -23,10 +23,11 @@ public class Driver<V extends Car> implements CategoryC, CategoryD, CategoryB {
 
     }
 
-    public void refuelTheCar () {
+    public void refuelTheCar() {
         System.out.println("Необходимо заправиться");
 
     }
+
     public String getFullName() {
         return fullName;
     }
@@ -51,7 +52,7 @@ public class Driver<V extends Car> implements CategoryC, CategoryD, CategoryB {
         if (experience > 3) {
             this.experience = experience;
         } else {
-            System.out.println( "Вы нам не подходите");
+            System.out.println("Вы нам не подходите");
         }
         return experience;
     }
@@ -64,6 +65,7 @@ public class Driver<V extends Car> implements CategoryC, CategoryD, CategoryB {
 
     public String toString() {
         return "ФИО: " + getFullName() + "; наличие прав - " + isValidDriversLicense(LICENSE_BE) + "; стаж: " + getExperience() + "лет.";
+
     }
 
 
@@ -85,5 +87,10 @@ public class Driver<V extends Car> implements CategoryC, CategoryD, CategoryB {
         startMoving();
         System.out.println("Вы участвуете в заезде!");
 
+    }
+
+    public String printif (V car) {
+        System.out.println(" за Вами закреплена машина - " + car.getBrand()+ " " + car.getModel());
+        return null;
     }
 }
