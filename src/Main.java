@@ -1,7 +1,4 @@
-import autoracing.Bus;
-import autoracing.Driver;
-import autoracing.PassengerCars;
-import autoracing.Trucks;
+import autoracing.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -44,19 +41,24 @@ public class Main {
         System.out.println(hyundai);
         System.out.println("\n");
 
-        Driver vasya = new Driver("Сажин Василий Михайлович", true, 12);
-        Driver petya = new Driver("Григорьев Петр Иванович", true, 7);
-        Driver roman = new Driver("Носов Роман Евгеньевич", true, 2);
+        Driver vasya = new Driver("Сажин Василий Михайлович", true,"D", 12, daewoo);
+        Driver petya = new Driver("Григорьев Петр Иванович", true, "C",7, man);
+        Driver roman = new Driver("Носов Роман Евгеньевич", true, "B", 4, lada);
         System.out.println(vasya);
         System.out.println(petya);
         System.out.println(roman);
         System.out.println(vasya.isValidDriversLicense("есть"));
 
-        Driver<Trucks> oleg = new Driver<>("Олег", true, 7);
+        Driver<Trucks> oleg = new Driver<>("Олег", true, "C",7, jac);
         oleg.drivingAcar(jac);
 
         vasya.drivingAcar(audi);
         vasya.printif(audi);
+        System.out.println("\n");
+
+        PassengerCars car = new PassengerCars("Kia", "K5", 3.0);
+        DriverB driverB = new DriverB("Роман", 10,car);
+        System.out.println(driverB);
 
     }
 }

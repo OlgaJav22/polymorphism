@@ -6,11 +6,15 @@ public class Driver<V extends Car> implements CategoryC, CategoryD, CategoryB {
     private boolean validDriversLicense;
     private int experience;
     public static final String LICENSE_BE = "есть";
+    private String category;
+    private final V car;
 
-    public Driver(String fullName, boolean validDriversLicense, int experience) {
+    public Driver(String fullName, boolean validDriversLicense, String category, int experience, V car) {
         setFullName(fullName);
         this.validDriversLicense = validDriversLicense;
+        this.category = category;
         this.experience = experience;
+        this.car = car;
     }
 
     public void startMoving() {
@@ -48,6 +52,10 @@ public class Driver<V extends Car> implements CategoryC, CategoryD, CategoryB {
         }
     }
 
+    public String getCategory() {
+        return category;
+    }
+
     public int getExperience() {
         if (experience > 3) {
             this.experience = experience;
@@ -64,8 +72,9 @@ public class Driver<V extends Car> implements CategoryC, CategoryD, CategoryB {
     }
 
     public String toString() {
-        return "ФИО: " + getFullName() + "; наличие прав - " + isValidDriversLicense(LICENSE_BE) + "; стаж: " + getExperience() + "лет.";
-
+        return "ФИО: " + getFullName() + "; наличие прав - " + isValidDriversLicense(LICENSE_BE) + "; стаж: " + getExperience() + "лет."
+                + "\t"
+                + "Водитель - " + getFullName() + " управляет автомобилем " + this.car.getBrand() + this.car.getModel() + " и будет участвовать в заезде";
     }
 
 
