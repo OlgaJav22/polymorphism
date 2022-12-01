@@ -15,10 +15,10 @@ public class Main {
         System.out.println(gazel);
         System.out.println("\n");
 
-        PassengerCars lada = new PassengerCars("Lada", "Granta", 2.9);
-        PassengerCars audi = new PassengerCars("Audi", "A8 50L TDI quattro", 3.9);
-        PassengerCars bmw = new PassengerCars("BMW", "Z8", 4.0);
-        PassengerCars kia = new PassengerCars("Kia", "Sportage", 2.9);
+        PassengerCars lada = new PassengerCars("Lada", "Granta", 2.9, PassengerCars.BodyType.CD_N);
+        PassengerCars audi = new PassengerCars("Audi", "A8 50L TDI quattro", 3.9, PassengerCars.BodyType.VN_IK);
+        PassengerCars bmw = new PassengerCars("BMW", "Z8", 4.0, PassengerCars.BodyType.KR_VER);
+        PassengerCars kia = new PassengerCars("Kia", "Sportage", 2.9, PassengerCars.BodyType.UN_SAL);
 
         audi.startMoving();
         bmw.getBestLapTime();
@@ -56,9 +56,12 @@ public class Main {
         vasya.printif(audi);
         System.out.println("\n");
 
-        PassengerCars car = new PassengerCars("Kia", "K5", 3.0);
+        PassengerCars car = new PassengerCars("Kia", "K5", 3.0, PassengerCars.BodyType.XCH_BK);
         DriverB driverB = new DriverB("Роман", 10,car);
         System.out.println(driverB);
+
+        System.out.println(PassengerCars.BodyType.CD_N.getNamingBodyType());
+
 
     }
 }

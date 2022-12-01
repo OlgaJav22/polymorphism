@@ -6,12 +6,22 @@ public class Car {
     private String model;
     private double engineCapacity;
 
+
     public Car(String brand, String model, double engineCapacity) {
         if (brand != null && !brand.isEmpty() && !brand.isBlank()) {
             this.brand = brand;
         }
         setModel(model);
         setEngineCapacity(engineCapacity);
+    }
+
+    public Car() {
+
+    }
+
+    public String getNamingBodyType(String bodyType) {
+        return bodyType;
+
     }
 
 
