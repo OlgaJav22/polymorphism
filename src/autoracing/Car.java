@@ -24,6 +24,10 @@ public class Car {
 
     }
 
+    public int getCapacityBus(int capacity) {
+        return capacity;
+    }
+
 
     public void startMoving() {
 

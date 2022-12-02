@@ -2,10 +2,10 @@ import autoracing.*;
 
 public class Main {
     public static void main(String[] args) {
-        Bus daewoo = new Bus("DAEWOO", "BS090", 4.8);
-        Bus isuzu = new Bus("ISUZU", "А-092Н6", 5.9);
-        Bus mercedes = new Bus("MERCEDES", "Conecto G", 5.0);
-        Bus gazel = new Bus("Газель", "ГАЗ-560", 3.9);
+        Bus daewoo = new Bus("DAEWOO", "BS090", 4.8, Bus.BodyType.AVERAGE);
+        Bus isuzu = new Bus("ISUZU", "А-092Н6", 5.9, Bus.BodyType.ESPECIALLY_BIG);
+        Bus mercedes = new Bus("MERCEDES", "Conecto G", 5.0, Bus.BodyType.SMALL);
+        Bus gazel = new Bus("Газель", "ГАЗ-560", 3.9, Bus.BodyType.BIG);
 
         isuzu.startMoving();
         mercedes.getPitStop();
